@@ -1,5 +1,4 @@
 import readlineSync from 'readline-sync';
-// import {question} from '../src/cli.js';
 
 let variable;
 let i = 0;
@@ -7,7 +6,6 @@ let i = 0;
 const brain_even = () => {    
     
     console.log('Welcome to the Brain Games!');
-    // question();
     const name = readlineSync.question('May I have your name: ');
     console.log(`Hello, ${name}!`)
     console.log('Answer "yes" if the number is even, otherwise answer "no".');
