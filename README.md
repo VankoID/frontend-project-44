@@ -7,6 +7,9 @@
 Asciinema's for games:
 
 brain-even https://asciinema.org/a/KfW87cuzJQcvjQsij1zlG3SH2
+
 brain-calc https://asciinema.org/a/fa36DP9UqeNhTQI1zP4RwIuLj
+
 brain-gcd https://asciinema.org/a/z0RK9HjfDW3IWWNfUtvHu19PK
+
 brain-progression :https://asciinema.org/a/Vf3nKBI2ZmrYlR8tENBuQ80Zs
