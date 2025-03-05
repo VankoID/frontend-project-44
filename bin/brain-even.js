@@ -30,7 +30,7 @@ const brain_even = () => {
             else if (answer === 'no') return console.log (`${answer} is wrong answer ;(. Correct answer was 'yes'.\nLet's try again, ${name}!`)
             else return console.log (`Unsupported answer!\nLet's try again, ${name}!`)
     } 
-    return console.log(`Congratulations, ${name}`)
+    return console.log(`Congratulations, ${name}!`)
 }
 
 brain_even();
