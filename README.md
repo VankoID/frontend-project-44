@@ -5,16 +5,17 @@
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/9a9e60aa7b0fc6bbce1b/maintainability)](https://codeclimate.com/github/VankoID/frontend-project-44/maintainability)
 
-Склонируйте локально репозиторий `git@github.com:VankoID/frontend-project-44.git` командой `git clone` на свой компьютер.
+Склонируйте локально репозиторий `git@github.com:VankoID/frontend-project-44.git` командой `git clone` на свой компьютер;
 
-Командой `make install` установите зависимости.
+Командой `make install` установите зависимости;
 
-Для запуска игр используйте команду `make ...`, где `...` название запускающего файла соответственно: 
+Для запуска игр используйте команду `make ...`, где `...` название запускающего файла соответственно:
+ 
 - чётное число `brain-even`;
 - калькулятор `brain-calc`;
 - наибольший делитель `brain-gcd`;
 - прогрессия `brain-progression`;
-- простое число `brain-prime`
+- простое число `brain-prime`;
 
 
 
