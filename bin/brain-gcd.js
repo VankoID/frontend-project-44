@@ -28,7 +28,7 @@ const brain_gcd = () => {
             i = i + 1;
             console.log('Correct');
     } else return console.log(`'${answer}' is wrong answer ;(. Correct answer was '${solution}'.\nLet's try again, ${name}!`)
-} return console.log(`Congratulation, ${name}!`)
+} return console.log(`Congratulations, ${name}!`)
 }
 
 brain_gcd();
