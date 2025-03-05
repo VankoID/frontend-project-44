@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 import readlineSync from 'readline-sync';
 let i = 0;
 const brain_gcd = () => {    
@@ -26,7 +28,7 @@ const brain_gcd = () => {
             i = i + 1;
             console.log('Correct');
     } else return console.log(`'${answer}' is wrong answer ;(. Correct answer was '${solution}'.\nLet's try again, ${name}!`)
-} return console.log(`Congratulation, ${name}`)
+} return console.log(`Congratulation, ${name}!`)
 }
 
 brain_gcd();

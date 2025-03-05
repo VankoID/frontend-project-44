@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 import readlineSync from 'readline-sync';
 
 let i = 0;
@@ -21,22 +23,22 @@ const brain_calc = () => {
             if (Number(answer) === number * number_2) {
                 i = i + 1;
                 console.log('Correct')    
-            } else return console.log(`Question: ${number} ${resultOperation} ${number_2}\nYour answer: ${answer}\n'${answer}' is wrong answer ;(. Correct answer was '${number * number_2}'\nLet's try again, ${name}`)
+            } else return console.log(`Question: ${number} ${resultOperation} ${number_2}\nYour answer: ${answer}\n'${answer}' is wrong answer ;(. Correct answer was '${number * number_2}'\nLet's try again, ${name}!`)
         } 
         else if (resultOperation === '+') {
                 if (Number(answer) === number + number_2) {
                 i = i + 1;
                 console.log('Correct')
-            }else return console.log(`Question: ${number} ${resultOperation} ${number_2}\nYour answer: ${answer}\n'${answer}' is wrong answer ;(. Correct answer was '${number + number_2}'\nLet's try again, ${name}`)
+            }else return console.log(`Question: ${number} ${resultOperation} ${number_2}\nYour answer: ${answer}\n'${answer}' is wrong answer ;(. Correct answer was '${number + number_2}'\nLet's try again, ${name}!`)
         }
         else if (resultOperation === '-') {
                 if (Number(answer) === number - number_2) {
                     i = i + 1;
                     console.log('Correct')
-                }else return console.log(`Question: ${number} ${resultOperation} ${number_2}\nYour answer: ${answer}\n'${answer}' is wrong answer ;(. Correct answer was '${number - number_2}'\nLet's try again, ${name}`)
+                }else return console.log(`Question: ${number} ${resultOperation} ${number_2}\nYour answer: ${answer}\n'${answer}' is wrong answer ;(. Correct answer was '${number - number_2}'\nLet's try again, ${name}!`)
         } else return
     }
-    return console.log(`Congratulations, ${name}`)
+    return console.log(`Congratulations, ${name}!`)
 }   
 
 brain_calc();

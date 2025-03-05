@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 import readlineSync from 'readline-sync';
 
 const brain_progression = () => {        
@@ -27,6 +29,6 @@ const brain_progression = () => {
             i = i + 1;
             console.log('Correct');
     } else return console.log(`'${answer}' is wrong answer ;(. Correct answer was '${checkRandom}'.\nLet's try again, ${name}!`)
-} return console.log(`Congratulation, ${name}`)
+} return console.log(`Congratulation, ${name}!`)
 }
 brain_progression();
