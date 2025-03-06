@@ -1,9 +1,9 @@
-import js from "@eslint/js";
-import prettier from "eslint-config-prettier";
+// import js from "@eslint/js";
+// import prettier from "eslint-config-prettier";
 import eslintPluginImport from "eslint-plugin-import";
 import eslintPluginReact from "eslint-plugin-react";
 import eslintPluginReactHooks from "eslint-plugin-react-hooks";
-import tseslint from "typescript-eslint";
+// import tseslint from "typescript-eslint";
 
 export default {
   plugins: {
