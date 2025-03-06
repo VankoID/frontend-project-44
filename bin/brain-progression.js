@@ -1,9 +1,9 @@
 #!/usr/bin/env node
-import readlineSync from "readline-sync";
+import readlineSync from 'readline-sync';
 
 const brainProgression = () => {
-  console.log("Welcome to the Brain Games!");
-  const name = readlineSync.question("May I have your name: ");
+  console.log('Welcome to the Brain Games!');
+  const name = readlineSync.question('May I have your name: ');
   console.log(`Hello, ${name}!`);
   let i = 0;
   while (i < 3) {
@@ -18,14 +18,14 @@ const brainProgression = () => {
     }
     const randomIndex = Math.floor(Math.random() * (array.length - 1));
     const checkRandom = (array[randomIndex]);
-    array[randomIndex] = "..";
-    const str = array.join(" ");
-    console.log("What number is missing in the progression?");
+    array[randomIndex] = '..';
+    const str = array.join(' ');
+    console.log('What number is missing in the progression?');
     console.log(`Question: ${str}`);
-    const answer = readlineSync.question("Your answer: ");
+    const answer = readlineSync.question('Your answer: ');
     if (Number(answer) === checkRandom) {
       i += 1;
-      console.log("Correct");
+      console.log('Correct');
     } else return console.log(`'${answer}' is wrong answer ;(. Correct answer was '${checkRandom}'.\nLet's try again, ${name}!`);
   } return console.log(`Congratulations, ${name}!`);
 };
