@@ -18,7 +18,7 @@
     "brain-calc": "bin/brain-calc.js",
     "brain-gcd": "bin/brain-gcd.js",
     "brain-progression": "bin/brain-progression.js",
-    "brain-prime": "bin/brain-prime.js"	
+    "brain-prime": "bin/brain-prime.js"
   },
   "license": "ISC",
   "bugs": {
@@ -26,12 +26,18 @@
   },
   "homepage": "https://github.com/VankoID/frontend-project-44#readme",
   "dependencies": {
-    "@eslint/create-config": "^1.0.0",
     "readline-sync": "^1.4.10"
   },
   "devDependencies": {
-    "@eslint/js": "^9.20.0",
-    "eslint": "^9.20.1",
-    "globals": "^16.0.0"
+    "@eslint/create-config": "^1.0.0",
+    "@eslint/js": "^9.21.0",
+    "eslint": "^9.21.0",
+    "eslint-config-prettier": "^10.0.2",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-react": "^7.37.4",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "globals": "^16.0.0",
+    "typescript": "^5.8.2",
+    "typescript-eslint": "^8.26.0"
   }
 }

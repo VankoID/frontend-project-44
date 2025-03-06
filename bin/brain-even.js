@@ -17,7 +17,7 @@ const brain_even = () => {
         console.log(`Question: ${number}`);
         const answer = readlineSync.question('Your answer: ')
         if (number % 2 === 0){
-            variable = 'even'
+            variable = 'even';
         } 
         else variable = 'odd';
     
