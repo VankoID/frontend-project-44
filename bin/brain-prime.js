@@ -1,28 +1,29 @@
 #!/usr/bin/env node
-import readlineSync from 'readline-sync';
+import readlineSync from "readline-sync";
+
 let i = 0;
 const brainPrime = () => {
-  console.log('Welcome to the Brain Games!');
-  const name = readlineSync.question('May I have your name: ');
+  console.log("Welcome to the Brain Games!");
+  const name = readlineSync.question("May I have your name: ");
   console.log(`Hello, ${name}!`);
-  console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
+  console.log("Answer \"yes\" if given number is prime. Otherwise answer \"no\".");
   while (i < 3) {
     const number = Math.floor(Math.random() * 100);
     console.log(`Question: ${number}`);
-    const answer = readlineSync.question('Your answer: ');
+    const answer = readlineSync.question("Your answer: ");
     const prime = () => {
-      if (number < 2) return 'no';
+      if (number < 2) return "no";
       for (let j = 2; j <= Math.sqrt(number); j += 1) {
         if (number % j === 0) {
-          return 'no';
+          return "no";
         }
       }
-      return'yes';
+      return "yes";
     };
     const solution = prime();
-    if ((answer === 'no' && solution === 'no') || ((answer === 'yes' && solution === 'yes'))) {
+    if ((answer === "no" && solution === "no") || ((answer === "yes" && solution === "yes"))) {
       i += 1;
-      console.log('Correct');
+      console.log("Correct");
     } else return console.log(`'${answer}' is wrong answer ;(. Correct answer was '${solution}'.\nLet's try again, ${name}!`);
   }
   return console.log(`Congratulations, ${name}!`);
