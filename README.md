@@ -15,19 +15,23 @@
  
 - чётное число `brain-even`;
 
-<img src="/asciinemas/brain-even.png" width="600"/>
+<img src="/asciinemas/brain-even.png" width="400"/>
 
 
 - калькулятор `brain-calc`;
 
-<img src="/asciinemas/brain-calc.png" width="600"/>
+<img src="/asciinemas/brain-calc.png" width="400"/>
 
 
 - наибольший делитель `brain-gcd`;
-![brain-gcd](/asciinemas/brain-gcd.png)
+
+<img src="/asciinemas/brain-gcd.png" width="400"/>
 
 - прогрессия `brain-progression`;
-![brain-progression](/asciinemas/brain-progression.png)
+
+<img src="/asciinemas/brain-progression.png" width="400"/>
 
 - простое число `brain-prime`;
-![brain-prime](/asciinemas/brain-prime.png)
+
+<img src="/asciinemas/brain-prime.png" width="400"/>
+
