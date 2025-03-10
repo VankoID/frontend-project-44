@@ -14,8 +14,16 @@
 Для запуска игр используйте команду `make ...`, где `...` название запускающего файла соответственно:
  
 - чётное число `brain-even`;
+![brain-even](/asciinemas/brain-even.png)
 
 - калькулятор `brain-calc`;
+![brain-calc](/asciinemas/brain-calc.png)
+
 - наибольший делитель `brain-gcd`;
+![brain-gcd](/asciinemas/brain-gcd.png)
+
 - прогрессия `brain-progression`;
+![brain-progression](/asciinemas/brain-progression.png)
+
 - простое число `brain-prime`;
+![brain-prime](/asciinemas/brain-prime.png)
