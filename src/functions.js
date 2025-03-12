@@ -6,7 +6,6 @@ const gretting = () => {
   console.log(`Hello, ${name}!`);
   return name;
 };
-
 const randomNumber = () => {
   const number = Math.floor(Math.random() * 100 + 1);
   return number;
@@ -18,4 +17,3 @@ const randomSmallNumber = () => {
 };
 
 export { gretting, randomNumber, randomSmallNumber };
-
