@@ -1,15 +1,14 @@
 #!/usr/bin/env node
 import readlineSync from 'readline-sync';
+import { gretting, randomSmallNumber } from '../functions.js';
 
 let i = 0;
 const brainCalc = () => {
-  console.log('Welcome to the Brain Games!');
-  const name = readlineSync.question('May I have your name: ');
-  console.log(`Hello, ${name}!`);
+  const name = gretting();
   console.log('What is the result of the expression?');
   while (i < 3) {
-    const number = Math.floor(Math.random() * 10 + 1);
-    const number2 = Math.floor(Math.random() * 10 + 1);
+    const number = randomSmallNumber();
+    const number2 = randomSmallNumber();
     const operation = ['*', '+', '-'];
     const randomIndex = Math.floor(Math.random() * (operation.length - 1));
     const resultOperation = operation[randomIndex];

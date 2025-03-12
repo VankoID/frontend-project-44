@@ -1,15 +1,14 @@
 #!/usr/bin/env node
 import readlineSync from 'readline-sync';
+import { gretting, randomNumber } from '../functions.js';
 
-let variable;
 let i = 0;
+let variable;
 const brainEven = () => {
-  console.log('Welcome to the Brain Games!');
-  const name = readlineSync.question('May I have your name: ');
-  console.log(`Hello, ${name}!`);
+  const name = gretting();
   console.log('Answer "yes" if the number is even, otherwise answer "no".');
   while (i < 3) {
-    const number = Math.floor(Math.random() * 100 + 1);
+    const number = randomNumber();
     console.log(`Question: ${number}`);
     const answer = readlineSync.question('Your answer: ');
     if (number % 2 === 0) {

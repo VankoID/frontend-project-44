@@ -1,14 +1,13 @@
 #!/usr/bin/env node
 import readlineSync from 'readline-sync';
+import { gretting, randomNumber } from '../functions.js';
 
 let i = 0;
 const brainPrime = () => {
-  console.log('Welcome to the Brain Games!');
-  const name = readlineSync.question('May I have your name: ');
-  console.log(`Hello, ${name}!`);
+  const name = gretting();
   console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
   while (i < 3) {
-    const number = Math.floor(Math.random() * 100);
+    const number = randomNumber();
     console.log(`Question: ${number}`);
     const answer = readlineSync.question('Your answer: ');
     const prime = () => {

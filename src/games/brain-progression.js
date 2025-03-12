@@ -1,14 +1,13 @@
 #!/usr/bin/env node
 import readlineSync from 'readline-sync';
+import { gretting, randomNumber, randomSmallNumber } from '../functions.js';
 
+let i = 0;
 const brainProgression = () => {
-  console.log('Welcome to the Brain Games!');
-  const name = readlineSync.question('May I have your name: ');
-  console.log(`Hello, ${name}!`);
-  let i = 0;
+  const name = gretting();
   while (i < 3) {
-    let number = Math.floor(Math.random() * 100 + 1);
-    const diff = Math.floor(Math.random() * 10 + 1);
+    let number = randomNumber();
+    const diff = randomSmallNumber();
     let j = 0;
     const array = [];
     while (j < 11) {
