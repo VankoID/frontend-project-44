@@ -1,9 +1,9 @@
-#!/usr/src/games/env node
+#!/usr/bin/env node
 import readlineSync from 'readline-sync';
 import { gretting, randomSmallNumber } from '../functions.js';
 
+let i = 0;
 const brainCalc = () => {
-  let i = 0;
   const name = gretting();
   console.log('What is the result of the expression?');
   while (i < 3) {
