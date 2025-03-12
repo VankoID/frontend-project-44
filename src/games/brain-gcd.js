@@ -2,8 +2,8 @@
 import readlineSync from 'readline-sync';
 import { gretting, randomNumber } from '../functions.js';
 
-let i = 0;
 const brainGcd = () => {
+  let i = 0;
   const name = gretting();
   console.log('Find the greatest common divisor of given numbers.');
   while (i < 3) {
@@ -27,4 +27,4 @@ const brainGcd = () => {
   } return console.log(`Congratulations, ${name}!`);
 };
 
-brainGcd();
+export default brainGcd();

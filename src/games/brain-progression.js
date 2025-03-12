@@ -2,8 +2,8 @@
 import readlineSync from 'readline-sync';
 import { gretting, randomNumber, randomSmallNumber } from '../functions.js';
 
-let i = 0;
 const brainProgression = () => {
+  let i = 0;
   const name = gretting();
   while (i < 3) {
     let number = randomNumber();
@@ -29,4 +29,4 @@ const brainProgression = () => {
   } return console.log(`Congratulations, ${name}!`);
 };
 
-brainProgression();
+export default brainProgression();

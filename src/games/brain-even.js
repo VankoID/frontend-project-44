@@ -2,9 +2,9 @@
 import readlineSync from 'readline-sync';
 import { gretting, randomNumber } from '../functions.js';
 
-let i = 0;
-let variable;
 const brainEven = () => {
+  let variable;
+  let i = 0;
   const name = gretting();
   console.log('Answer "yes" if the number is even, otherwise answer "no".');
   while (i < 3) {
@@ -25,4 +25,4 @@ const brainEven = () => {
   return console.log(`Congratulations, ${name}!`);
 };
 
-brainEven();
+export default brainEven();

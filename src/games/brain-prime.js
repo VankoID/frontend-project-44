@@ -2,8 +2,8 @@
 import readlineSync from 'readline-sync';
 import { gretting, randomNumber } from '../functions.js';
 
-let i = 0;
 const brainPrime = () => {
+  let i = 0;
   const name = gretting();
   console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
   while (i < 3) {
@@ -28,4 +28,4 @@ const brainPrime = () => {
   return console.log(`Congratulations, ${name}!`);
 };
 
-brainPrime();
+export default brainPrime();
