@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import readlineSync from 'readline-sync';
-import { gretting, randomSmallNumber } from '../functions.js';
+import { gretting, randomSmallNumber } from '../src/functions.js';
 
 let i = 0;
 const brainCalc = () => {
