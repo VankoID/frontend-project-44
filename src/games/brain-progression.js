@@ -29,4 +29,4 @@ const brainProgression = () => {
   } return console.log(`Congratulations, ${name}!`);
 };
 
-export default brainProgression();
+export default brainProgression;
