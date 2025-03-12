@@ -1,4 +1,4 @@
-#!/usr/bin/games/env node
+#!/usr/bin/src/games/env node
 import readlineSync from 'readline-sync';
 import { gretting, randomNumber } from '../functions.js';
 
