@@ -8,13 +8,6 @@ const gretting = () => {
   return name;
 };
 
-const cycle = () => {
-  let i = 0;
-  for (i; i < 3; i += 1) {
-    action();
-  }
-};
-
 // Функция генерации случайного числа до 100
 const randomNumber = () => {
   const number = Math.floor(Math.random() * 100 + 1);
@@ -27,4 +20,4 @@ const randomSmallNumber = () => {
   return numberSmall;
 };
 
-export { gretting, randomNumber, randomSmallNumber, cycle };
+export { gretting, randomNumber, randomSmallNumber };
