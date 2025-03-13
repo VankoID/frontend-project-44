@@ -1,6 +1,6 @@
 #!/usr/src/games/env node
 import readlineSync from 'readline-sync';
-import { gretting, randomNumber } from '../functions.js';
+import { gretting, randomNumber } from '../index.js';
 
 const brainPrime = () => {
   let i = 0;

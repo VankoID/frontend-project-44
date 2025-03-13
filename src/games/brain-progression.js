@@ -1,6 +1,6 @@
 #!/usr/src/games/env node
 import readlineSync from 'readline-sync';
-import { gretting, randomNumber, randomSmallNumber } from '../functions.js';
+import { gretting, randomNumber, randomSmallNumber } from '../index.js';
 
 const brainProgression = () => {
   let i = 0;
