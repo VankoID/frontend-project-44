@@ -1,5 +1,3 @@
-#!/usr/src/games/env node
-import readlineSync from 'readline-sync';
 import { gretting, randomNumber } from '../index.js';
 
 const brainGcd = () => {
