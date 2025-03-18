@@ -20,7 +20,7 @@ const randomSmallNumber = () => {
   return numberSmall;
 };
 
-// Функция запуска цикл до 3 верных ответов;
+// Функция запуска игры до 3 верных ответов;
 const mainGame = (name, generateQuestion) => {
   let i = 0;
   while (i < 3) {

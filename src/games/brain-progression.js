@@ -18,7 +18,7 @@ const brainProgression = () => {
     const correctAnswer = checkRandom;
     return {
       question:`Question: ${str}`,
-      correctAnswer,
+      correctAnswer: String(correctAnswer),
     };
   };
   const name = gretting();
