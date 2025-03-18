@@ -1,11 +1,7 @@
-#!/usr/src/games/env node
-import readlineSync from 'readline-sync';
-import { gretting, randomNumber, randomSmallNumber } from '../index.js';
+import { gretting, randomNumber, randomSmallNumber, mainGame } from '../index.js';
 
 const brainProgression = () => {
-  let i = 0;
-  const name = gretting();
-  while (i < 3) {
+  const generateQuestion = () => {
     let number = randomNumber();
     const diff = randomSmallNumber();
     let j = 0;
@@ -19,14 +15,15 @@ const brainProgression = () => {
     const checkRandom = (array[randomIndex]);
     array[randomIndex] = '..';
     const str = array.join(' ');
-    console.log('What number is missing in the progression?');
-    console.log(`Question: ${str}`);
-    const answer = readlineSync.question('Your answer: ');
-    if (Number(answer) === checkRandom) {
-      i += 1;
-      console.log('Correct');
-    } else return console.log(`'${answer}' is wrong answer ;(. Correct answer was '${checkRandom}'.\nLet's try again, ${name}!`);
-  } return console.log(`Congratulations, ${name}!`);
+    const correctAnswer = checkRandom;
+    return {
+      question:`Question: ${str}`,
+      correctAnswer,
+    };
+  };
+  const name = gretting();
+  console.log('What number is missing in the progression?');
+  mainGame(name, generateQuestion);
 };
 
 export default brainProgression;

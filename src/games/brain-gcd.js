@@ -12,8 +12,8 @@ const brainGcd = () => {
       }
       if (number2 > number) {
         number2 -= number;
-      };
-    };
+      }
+    }
     const correctAnswer = number;
     return {
       question: `Question: ${savedNumber} ${savedNumber2}`,

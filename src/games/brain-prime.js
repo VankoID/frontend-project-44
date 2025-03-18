@@ -1,15 +1,8 @@
-#!/usr/src/games/env node
-import readlineSync from 'readline-sync';
-import { gretting, randomNumber } from '../index.js';
+import { gretting, randomNumber, mainGame } from '../index.js';
 
 const brainPrime = () => {
-  let i = 0;
-  const name = gretting();
-  console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
-  while (i < 3) {
+  const generateQuestion = () => {
     const number = randomNumber();
-    console.log(`Question: ${number}`);
-    const answer = readlineSync.question('Your answer: ');
     const prime = () => {
       if (number < 2) return 'no';
       for (let j = 2; j <= Math.sqrt(number); j += 1) {
@@ -19,13 +12,15 @@ const brainPrime = () => {
       }
       return 'yes';
     };
-    const solution = prime();
-    if ((answer === 'no' && solution === 'no') || ((answer === 'yes' && solution === 'yes'))) {
-      i += 1;
-      console.log('Correct');
-    } else return console.log(`'${answer}' is wrong answer ;(. Correct answer was '${solution}'.\nLet's try again, ${name}!`);
-  }
-  return console.log(`Congratulations, ${name}!`);
+    const correctAnswer = prime();
+    return {
+      question: `Question: ${number}`,
+      correctAnswer,
+    };
+  };
+  const name = gretting();
+  console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
+  mainGame(name, generateQuestion);
 };
 
 export default brainPrime;
