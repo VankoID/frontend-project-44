@@ -18,9 +18,11 @@ const brainCalc = () => {
       case '-':
         correctAnswer = number - number2;
         break;
+      default:
+        console.log('Оператор не найден');
     }
     return {
-      question:`${number} ${resultOperation} ${number2}`,
+      question: `${number} ${resultOperation} ${number2}`,
       correctAnswer: String(correctAnswer),
     };
   };

@@ -1,5 +1,5 @@
 import {
-  gretting, randomNumber, randomSmallNumber, mainGame
+  gretting, randomNumber, randomSmallNumber, mainGame,
 } from '../index.js';
 
 const brainProgression = () => {

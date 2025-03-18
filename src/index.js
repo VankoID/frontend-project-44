@@ -40,5 +40,5 @@ const mainGame = (name, generateQuestion) => {
 };
 
 export {
-  gretting, randomNumber, randomSmallNumber, mainGame
+  gretting, randomNumber, randomSmallNumber, mainGame,
 };
