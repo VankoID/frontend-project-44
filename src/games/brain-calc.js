@@ -9,15 +9,15 @@ const brainCalc = () => {
     const resultOperation = operation[randomIndex];
     let correctAnswer;
     switch (resultOperation) {
-    case '*':
-      correctAnswer = number * number2;
-      break;
-    case '+':
-      correctAnswer = number + number2;
-      break;
-    case '-':
-      correctAnswer = number - number2;
-      break;
+      case '*':
+        correctAnswer = number * number2;
+        break;
+      case '+':
+        correctAnswer = number + number2;
+        break;
+      case '-':
+        correctAnswer = number - number2;
+        break;
     }
     return {
       question:`${number} ${resultOperation} ${number2}`,

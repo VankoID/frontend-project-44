@@ -1,4 +1,6 @@
-import { gretting, randomNumber, randomSmallNumber, mainGame } from '../index.js';
+import {
+  gretting, randomNumber, randomSmallNumber, mainGame
+} from '../index.js';
 
 const brainProgression = () => {
   const generateQuestion = () => {
@@ -17,7 +19,7 @@ const brainProgression = () => {
     const str = array.join(' ');
     const correctAnswer = checkRandom;
     return {
-      question:`Question: ${str}`,
+      question: `Question: ${str}`,
       correctAnswer: String(correctAnswer),
     };
   };

@@ -39,4 +39,6 @@ const mainGame = (name, generateQuestion) => {
   console.log(`Congratulations, ${name}!`);
 };
 
-export { gretting, randomNumber, randomSmallNumber, mainGame };
+export {
+  gretting, randomNumber, randomSmallNumber, mainGame
+};
