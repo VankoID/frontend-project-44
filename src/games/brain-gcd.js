@@ -3,10 +3,12 @@ import { randomNumber, gretting, mainGame } from '../index.js';
 const commonDivider = (num, num2) => {
   while (num !== num2) {
     if (num > num2) {
-      num -= num2;
+      const newNum = num - num2;
+      num = newNum;
     }
     if (num2 > num) {
-      num2 -= num;
+      const newNum2 = num2 - num;
+      num2 = newNum2;
     }
   } return num;
 };

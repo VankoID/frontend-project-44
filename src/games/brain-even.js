@@ -11,6 +11,6 @@ const questionCorrectAnswer = () => {
 };
 const name = gretting();
 const message = 'Answer "yes" if the number is even, otherwise answer "no".';
-mainGame(name, questionCorrectAnswer, message );
+mainGame(name, questionCorrectAnswer, message);
 
 export default questionCorrectAnswer;

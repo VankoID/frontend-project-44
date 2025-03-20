@@ -6,10 +6,11 @@ const progression = (num, num2) => {
   const progressionArray = [];
   let j = 0;
   while (j < 11) {
-    num += num2;
+    const newNum = num + num2;
+    num = newNum;
     j += 1;
-    progressionArray.push(num);
-  };
+    progressionArray.push(newNum);
+  }
   const randomIndex = Math.floor(Math.random() * (progressionArray.length - 1));
   const checkRandom = (progressionArray[randomIndex]);
   progressionArray[randomIndex] = '..';

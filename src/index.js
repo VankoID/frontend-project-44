@@ -8,11 +8,16 @@ const gretting = () => {
   return name;
 };
 
+// Функция вывода вопроса;
+const printQuestion = (message) => {
+  console.log(message);
+};
+
 // Функция генерации случайного числа в заданном диапазоне;
 function randomNumber(min = 1, max = 20) {
-  min = Math.ceil(min);
-  max = Math.floor(max);
-  return Math.floor(Math.random() * (max - min + 1)) + min;
+  minCeil = Math.ceil(min);
+  maxFloor = Math.floor(max);
+  return Math.floor(Math.random() * (maxFloor - minCeil + 1)) + minCeil;
 }
 
 // Функция запуска игры до 3 верных ответов;
@@ -33,11 +38,6 @@ const mainGame = (name, questionCorrectAnswer, message) => {
     }
   }
   console.log(`Congratulations, ${name}!`);
-};
-
-// Функция вывода вопроса;
-const printQuestion = (message) =>{
-  console.log(message);
 };
 
 export {

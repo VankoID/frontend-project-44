@@ -7,10 +7,10 @@ const calculate = (num, num2, operator) => {
     case '+':
       return num + num2;
     case '-':
-      return num - num2;;
+      return num - num2;
     default:
       throw new Error('Оператор не определён');
-    };
+  }
 };
 const questionCorrectAnswer = () => {
   const number = randomNumber();
