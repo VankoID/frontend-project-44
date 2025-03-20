@@ -1,34 +1,30 @@
-import { gretting, randomSmallNumber, mainGame } from '../index.js';
+import { gretting, randomNumber, mainGame } from '../index.js';
 
-const brainCalc = () => {
-  const generateQuestion = () => {
-    const number = randomSmallNumber();
-    const number2 = randomSmallNumber();
-    const operation = ['*', '+', '-'];
-    const randomIndex = Math.floor(Math.random() * (operation.length));
-    const resultOperation = operation[randomIndex];
-    let correctAnswer;
-    switch (resultOperation) {
-      case '*':
-        correctAnswer = number * number2;
-        break;
-      case '+':
-        correctAnswer = number + number2;
-        break;
-      case '-':
-        correctAnswer = number - number2;
-        break;
-      default:
-        console.log('Оператор не найден');
-    }
-    return {
-      question: `${number} ${resultOperation} ${number2}`,
-      correctAnswer: String(correctAnswer),
+const calculate = (num, num2, operator) => {
+  switch (operator) {
+    case '*':
+      return num * num2;
+    case '+':
+      return num + num2;
+    case '-':
+      return num - num2;;
+    default:
+      throw new Error('Оператор не определён');
     };
-  };
-  const name = gretting();
-  console.log('What is the result of the expression?');
-  mainGame(name, generateQuestion);
 };
+const questionCorrectAnswer = () => {
+  const number = randomNumber();
+  const number2 = randomNumber();
+  const operation = ['*', '+', '-'];
+  const randomIndex = Math.floor(Math.random() * (operation.length));
+  const resultOperation = operation[randomIndex];
+  const correctAnswer = calculate(number, number2, resultOperation);
+  return {
+    question: `${number} ${resultOperation} ${number2}`,
+    correctAnswer: String(correctAnswer),
+  };
+};
+const name = gretting();
+mainGame(name, questionCorrectAnswer, 'What is the result of the expression?');
 
-export default brainCalc;
+export default questionCorrectAnswer;

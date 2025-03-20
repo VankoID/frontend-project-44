@@ -1,27 +1,26 @@
 import { randomNumber, gretting, mainGame } from '../index.js';
 
-const brainGcd = () => {
-  const generateQuestion = () => {
-    let number = randomNumber();
-    let number2 = randomNumber();
-    const savedNumber = number;
-    const savedNumber2 = number2;
-    while (number !== number2) {
-      if (number > number2) {
-        number -= number2;
-      }
-      if (number2 > number) {
-        number2 -= number;
-      }
+const commonDivider = (num, num2) => {
+  while (num !== num2) {
+    if (num > num2) {
+      num -= num2;
     }
-    const correctAnswer = number;
-    return {
-      question: `Question: ${savedNumber} ${savedNumber2}`,
-      correctAnswer: String(correctAnswer),
-    };
-  };
-  const name = gretting();
-  console.log('Find the greatest common divisor of given numbers.');
-  mainGame(name, generateQuestion);
+    if (num2 > num) {
+      num2 -= num;
+    }
+  } return num;
 };
-export default brainGcd;
+const questionCorrectAnswer = () => {
+  const number = randomNumber();
+  const number2 = randomNumber();
+  const correctAnswer = commonDivider(number, number2);
+  return {
+    question: `${number} ${number2}`,
+    correctAnswer: String(correctAnswer),
+  };
+};
+const name = gretting();
+const message = 'Find the greatest common divisor of given numbers.';
+mainGame(name, questionCorrectAnswer, message);
+
+export default questionCorrectAnswer;

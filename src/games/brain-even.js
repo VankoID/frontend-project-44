@@ -1,20 +1,16 @@
 import { gretting, randomNumber, mainGame } from '../index.js';
 
-const brainEven = () => {
-  const generateQuestion = () => {
-    const number = randomNumber();
-    let correctAnswer;
-    if (number % 2 === 0) {
-      correctAnswer = 'yes';
-    } else correctAnswer = 'no';
-    return {
-      question: number,
-      correctAnswer,
-    };
+const isEven = (num) => (num % 2 === 0 ? 'yes' : 'no');
+const questionCorrectAnswer = () => {
+  const number = randomNumber(1, 100);
+  const correctAnswer = isEven(number);
+  return {
+    question: number,
+    correctAnswer,
   };
-  const name = gretting();
-  console.log('Answer "yes" if the number is even, otherwise answer "no".');
-  mainGame(name, generateQuestion);
 };
+const name = gretting();
+const message = 'Answer "yes" if the number is even, otherwise answer "no".';
+mainGame(name, questionCorrectAnswer, message );
 
-export default brainEven;
+export default questionCorrectAnswer;

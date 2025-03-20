@@ -1,31 +1,33 @@
 import {
-  gretting, randomNumber, randomSmallNumber, mainGame,
+  gretting, randomNumber, mainGame,
 } from '../index.js';
 
-const brainProgression = () => {
-  const generateQuestion = () => {
-    let number = randomNumber();
-    const diff = randomSmallNumber();
-    let j = 0;
-    const array = [];
-    while (j < 11) {
-      number += diff;
-      j += 1;
-      array.push(number);
-    }
-    const randomIndex = Math.floor(Math.random() * (array.length - 1));
-    const checkRandom = (array[randomIndex]);
-    array[randomIndex] = '..';
-    const str = array.join(' ');
-    const correctAnswer = checkRandom;
-    return {
-      question: `Question: ${str}`,
-      correctAnswer: String(correctAnswer),
-    };
+const progression = (num, num2) => {
+  const progressionArray = [];
+  let j = 0;
+  while (j < 11) {
+    num += num2;
+    j += 1;
+    progressionArray.push(num);
   };
-  const name = gretting();
-  console.log('What number is missing in the progression?');
-  mainGame(name, generateQuestion);
+  const randomIndex = Math.floor(Math.random() * (progressionArray.length - 1));
+  const checkRandom = (progressionArray[randomIndex]);
+  progressionArray[randomIndex] = '..';
+  const string = progressionArray.join(' ');
+  return [string, checkRandom];
 };
 
-export default brainProgression;
+const questionCorrectAnswer = () => {
+  const number = randomNumber();
+  const diff = randomNumber(1, 10);
+  const [str, correctAnswer] = progression(number, diff);
+  return {
+    question: `${str}`,
+    correctAnswer: String(correctAnswer),
+  };
+};
+const name = gretting();
+const message = 'What number is missing in the progression?';
+mainGame(name, questionCorrectAnswer, message);
+
+export default questionCorrectAnswer;
