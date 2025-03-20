@@ -5,11 +5,11 @@ import {
 const progression = (num, num2) => {
   const progressionArray = [];
   let j = 0;
+  let a = num;
   while (j < 11) {
-    const newNum = num + num2;
-    num = newNum;
+    a += num2;
     j += 1;
-    progressionArray.push(newNum);
+    progressionArray.push(a);
   }
   const randomIndex = Math.floor(Math.random() * (progressionArray.length - 1));
   const checkRandom = (progressionArray[randomIndex]);

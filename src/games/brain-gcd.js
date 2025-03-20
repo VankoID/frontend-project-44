@@ -1,16 +1,17 @@
 import { randomNumber, gretting, mainGame } from '../index.js';
 
 const commonDivider = (num, num2) => {
-  while (num !== num2) {
-    if (num > num2) {
-      const newNum = num - num2;
-      num = newNum;
+  let a = num;
+  let b = num2;
+
+  while (a !== b) {
+    if (a > b) {
+      a -= b;
     }
-    if (num2 > num) {
-      const newNum2 = num2 - num;
-      num2 = newNum2;
+    if (b > a) {
+      b -= a;
     }
-  } return num;
+  } return a;
 };
 const questionCorrectAnswer = () => {
   const number = randomNumber();
