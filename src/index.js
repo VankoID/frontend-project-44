@@ -15,8 +15,8 @@ const printQuestion = (message) => {
 
 // Функция генерации случайного числа в заданном диапазоне;
 function randomNumber(min = 1, max = 20) {
-  minCeil = Math.ceil(min);
-  maxFloor = Math.floor(max);
+  const minCeil = Math.ceil(min);
+  const maxFloor = Math.floor(max);
   return Math.floor(Math.random() * (maxFloor - minCeil + 1)) + minCeil;
 }
 
