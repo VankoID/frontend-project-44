@@ -1,6 +1,6 @@
 import { randomNumber, gretting, mainGame } from '../index.js';
 
-const commonDivider = (num, num2) => {
+const findGreatestCommonDivisor = (num, num2) => {
   let a = num;
   let b = num2;
 
@@ -16,14 +16,16 @@ const commonDivider = (num, num2) => {
 const questionCorrectAnswer = () => {
   const number = randomNumber();
   const number2 = randomNumber();
-  const correctAnswer = commonDivider(number, number2);
+  const correctAnswer = findGreatestCommonDivisor(number, number2);
   return {
     question: `${number} ${number2}`,
     correctAnswer: String(correctAnswer),
   };
 };
-const name = gretting();
-const message = 'Find the greatest common divisor of given numbers.';
-mainGame(name, questionCorrectAnswer, message);
+const startGame = () => {
+  const name = gretting();
+  const message = 'Find the greatest common divisor of given numbers.';
+  mainGame(name, questionCorrectAnswer, message);
+};
 
-export default questionCorrectAnswer;
+export { questionCorrectAnswer, startGame };

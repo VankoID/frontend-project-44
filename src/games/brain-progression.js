@@ -2,7 +2,7 @@ import {
   gretting, randomNumber, mainGame,
 } from '../index.js';
 
-const progression = (num, num2) => {
+const createProgression = (num, num2) => {
   const progressionArray = [];
   let j = 0;
   let a = num;
@@ -11,24 +11,28 @@ const progression = (num, num2) => {
     j += 1;
     progressionArray.push(a);
   }
-  const randomIndex = Math.floor(Math.random() * (progressionArray.length - 1));
-  const checkRandom = (progressionArray[randomIndex]);
-  progressionArray[randomIndex] = '..';
-  const string = progressionArray.join(' ');
-  return [string, checkRandom];
+  console.log(progressionArray);
+  return progressionArray;
 };
 
 const questionCorrectAnswer = () => {
   const number = randomNumber();
   const diff = randomNumber(1, 10);
-  const [str, correctAnswer] = progression(number, diff);
+  const progression = createProgression(number, diff);
+  const randomIndex = Math.floor(Math.random() * (progression.length - 1));
+  const checkRandom = (progression[randomIndex]);
+  progression[randomIndex] = '..';
+  const questionProgression = progression.join(' ');
+  const correctAnswer = checkRandom ;
   return {
-    question: `${str}`,
+    question: `${questionProgression}`,
     correctAnswer: String(correctAnswer),
   };
 };
-const name = gretting();
-const message = 'What number is missing in the progression?';
-mainGame(name, questionCorrectAnswer, message);
+const startGame = () => {
+  const name = gretting();
+  const message = 'What number is missing in the progression?';
+  mainGame(name, questionCorrectAnswer, message);
+};
 
-export default questionCorrectAnswer;
+export { questionCorrectAnswer, startGame };
