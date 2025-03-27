@@ -3,7 +3,6 @@ import { randomNumber, gretting, mainGame } from '../index.js';
 const findGreatestCommonDivisor = (num, num2) => {
   let a = num;
   let b = num2;
-
   while (a !== b) {
     if (a > b) {
       a -= b;

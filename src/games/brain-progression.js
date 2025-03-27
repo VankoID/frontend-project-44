@@ -23,7 +23,7 @@ const questionCorrectAnswer = () => {
   const checkRandom = (progression[randomIndex]);
   progression[randomIndex] = '..';
   const questionProgression = progression.join(' ');
-  const correctAnswer = checkRandom ;
+  const correctAnswer = checkRandom;
   return {
     question: `${questionProgression}`,
     correctAnswer: String(correctAnswer),

@@ -29,4 +29,4 @@ const startGame = () => {
   mainGame(name, questionCorrectAnswer, 'What is the result of the expression?');
 };
 
-export { questionCorrectAnswer,startGame };
+export { questionCorrectAnswer, startGame };
