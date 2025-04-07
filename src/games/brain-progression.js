@@ -10,7 +10,7 @@ const createProgression = (num, num2) => {
     a += num2;
     j += 1;
     progressionArray.push(a);
-  };
+  }
   return progressionArray;
 };
 
